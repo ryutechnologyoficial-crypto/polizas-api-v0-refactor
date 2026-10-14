@@ -1,0 +1,8 @@
+# Finales de línea LF en el repositorio (evita diferencias CRLF en Windows).
+* text=auto eol=lf
+# Los .bat de Windows necesitan CRLF para funcionar.
+*.bat text eol=crlf
+*.pkl binary
+*.db binary
+# La batería de contrato debe llegar byte a byte igual que en el semilla.
+tests/test_contrato.py -text
